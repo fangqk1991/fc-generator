@@ -1,0 +1,49 @@
+{
+  "name": "@fangcha/generator",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "repository": "https://github.com/fangqk1991/fc-generator.git",
+  "scripts": {
+    "test": "nyc mocha --require ts-node/register tests/**/*.test.ts --timeout 10000 --exit",
+    "build": "rm -rf ./lib/ && tsc"
+  },
+  "keywords": [],
+  "author": "fang <me@fangqk.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/ejs": "^2.6.3",
+    "ejs": "^2.7.1"
+  },
+  "devDependencies": {
+    "@fangcha/eslint": "^0.2.0",
+    "@types/assert": "^1.5.1",
+    "@types/mocha": "^8.0.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2",
+    "tslib": "^2.3.1",
+    "fc-sql": "^0.25.0",
+    "@fangcha/tools": "^1.10.0",
+    "@fangcha/swagger": "^0.1.0"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": true,
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "files": [
+    "lib/*",
+    "src/*",
+    "templates/*"
+  ],
+  "nyc": {
+    "sourceMap": false
+  }
+}
