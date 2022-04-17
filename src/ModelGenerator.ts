@@ -94,7 +94,7 @@ export class ModelGenerator {
       }
 
       // 名为 rid | _rid 的列会被忽略
-      if (columnName === 'rid' || columnName === '_rid') {
+      if (!schema.forceUseRid && (columnName === 'rid' || columnName === '_rid')) {
         continue
       }
 

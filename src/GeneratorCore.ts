@@ -43,6 +43,7 @@ export interface DBModelSchema {
   extrasSchemaData?: {
     [p: string]: string
   }
+  forceUseRid?: boolean
 }
 
 export interface ModelColumn {
@@ -63,6 +64,7 @@ export interface DBReadonlySchema {
   readableWhiteList?: string[]
   readableBlackList?: string[]
   specificProps?: { [p: string]: string }
+  forceUseRid?: boolean
   outputFile?: string
 }
 
